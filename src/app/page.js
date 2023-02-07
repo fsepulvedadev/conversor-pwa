@@ -24,7 +24,7 @@ export default function Home() {
   }, [precio]);
 
   const getDataDolar = async () => {
-    const dataDolar = await axios.get("http://localhost:4000/api");
+    const dataDolar = await axios.get("https://dolar-api-zeta.vercel.app/api");
     const dataChileno = await axios.get("https://mindicador.cl/api/dolar/");
 
     console.log(dataDolar);
@@ -47,8 +47,8 @@ export default function Home() {
   return (
     <main className="w-8/12 mx-auto">
       <div className="flex flex-col items-center justify-center mt-5">
-        <div className="flex justify-center items-center mb-4">
-          <h1 className=" font-semibold text-2xl mr-4">Cuanto sale ?</h1>
+        <div className="flex items-center justify-center mb-4">
+          <h1 className="mr-4 text-2xl font-semibold ">Cuanto sale ?</h1>
           <Image
             className="w-10 h-10"
             alt="calculadora"
@@ -57,14 +57,14 @@ export default function Home() {
         </div>
 
         <form className="flex flex-col items-center justify-center p-2 w-[100vw]">
-          <div className="form-control w-8/12 mx-auto">
-            <label className="label text-center">
+          <div className="w-8/12 mx-auto form-control">
+            <label className="text-center label">
               <div className="flex items-center justify-center w-full ">
-                <span className="label-text font-semibold">Precio en</span>
+                <span className="font-semibold label-text">Precio en</span>
                 <Image className="w-10 ml-2" alt="chile" src={Chile}></Image>
               </div>
             </label>
-            <label className="input-group flex justify-center items-center w-10/12 mx-auto">
+            <label className="flex items-center justify-center w-10/12 mx-auto input-group">
               <input
                 min={0}
                 value={precio}
@@ -77,13 +77,13 @@ export default function Home() {
           </div>
           <Image src={Flecha} className="w-10 mt-4" alt="flecha" />
           <div className="form-control">
-            <label className="label text-center">
+            <label className="text-center label">
               <div className="flex items-center justify-center w-full">
-                <span className="label-text font-semibold">Vas a pagar</span>
+                <span className="font-semibold label-text">Vas a pagar</span>
                 <Image className="w-10 ml-2" alt="arg" src={Arg}></Image>
               </div>
             </label>
-            <div className="w-full justify-center items-center text-center border rounded p-4 border-primary text-primary">
+            <div className="items-center justify-center w-full p-4 text-center border rounded border-primary text-primary">
               <p className="text-3xl font-semibold">
                 {resultado.toLocaleString("en-US", {
                   style: "currency",
