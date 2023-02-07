@@ -6,7 +6,6 @@ import Calculadora from "../assets/calculator.png";
 import Flecha from "../assets/down-arrow.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { xml2json } from "xml-js";
 import Cotizaciones from "@/components/cotizaciones";
 
 export default function Home() {
@@ -18,6 +17,10 @@ export default function Home() {
   useEffect(() => {
     getDataDolar();
   }, []);
+  useEffect(() => {
+    setChilenos(localStorage.getItem("dolarVsChileno"));
+    setArgentinos(localStorage.getItem("dolarTarjeta"));
+  }, []);
 
   useEffect(() => {
     setResultado(handleResultado(precio));
@@ -28,7 +31,16 @@ export default function Home() {
     const dataChileno = await axios.get("https://mindicador.cl/api/dolar/");
 
     console.log(dataDolar);
+    if (dataDolar.data.valor * 2 != localStorage.getItem("dolarTarjeta")) {
+      localStorage.setItem("dolarTarjeta", dataDolar.data.valor * 2);
+    }
     setArgentinos(dataDolar.data.valor * 2);
+
+    if (
+      dataChileno.data.serie[0].valor != localStorage.getItem("dolarVsChileno")
+    ) {
+      localStorage.setItem("dolarVsChileno", dataChileno.data.serie[0].valor);
+    }
 
     setChilenos(dataChileno.data.serie[0].valor);
   };
