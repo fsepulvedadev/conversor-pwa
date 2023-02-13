@@ -7,6 +7,7 @@ import Flecha from "../assets/down-arrow.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Cotizaciones from "@/components/cotizaciones";
+import Script from "next/script";
 
 export default function Home() {
   const [precio, setPrecio] = useState(undefined);
