@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-10/12 mx-auto ">
+    <main className="w-10/12 min-h-screen mx-auto ">
       <div className="flex flex-col items-center justify-center">
         <div className="w-10/12 min-h-full mb-4 hero bg-base-200 rounded-box">
           <div className="text-center hero-content">

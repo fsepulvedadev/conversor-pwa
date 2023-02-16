@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
         <head />
-        <body className="bg-primary bg-gradient-to-t to-[#F2994A] from-[#181818] shadow-2xl">
+        <body className="bg-primary bg-gradient-to-t to-[#F2994A] from-[#181818] shadow-2xl min-h-screen">
           <div className="flex items-center justify-center mt-10 mb-4">
             <h1 className="mr-2 text-xl font-semibold text-center md:text-2xl text-base-100">
               ¿ Cuanto voy a pagar ?
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             ></Image>
           </div>
           {children}
-          <footer className="absolute bottom-0 w-full bg-base-200">
+          <footer className="sticky bottom-0 w-full bg-base-200">
             <h1 className="w-full text-center text-white ">
               Desarrollado por{" "}
               <a className="font-bold" href="https://fsepulveda.vercel.app/">
