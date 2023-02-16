@@ -1,22 +1,25 @@
 import React from "react";
 
-const cotizaciones = ({ valorChileno, valorArs }) => {
+const cotizaciones = ({ valorExt, valorArs, monedaExt }) => {
+  valorExt = +valorExt;
   return (
     <div
-      className={` stats bg-primary text-primary-content my-6 xl:absolute top-0 left-5`}
+      className={` stats bg-[#F2994A] text-primary-content my-6  top-0 left-5 flex`}
     >
-      <div className="stat min-w-[160px]">
-        <div className="stat-title font-semibold text-white text-center">
-          Dolar a Chileno
+      <div className=" p-2 md:min-w-[160px] w-full">
+        <div className="font-semibold text-center text-secondary-accent stat-title">
+          Dolar a {monedaExt}
         </div>
-        <div className="stat-value text-2xl md:text-4xl">$ {valorChileno}</div>
+        <div className="text-2xl stat-value md:text-4xl">
+          $ {valorExt.toFixed(2)}
+        </div>
       </div>
 
-      <div className="stat min-w-[160px]">
-        <div className="stat-title font-semibold text-white text-center">
-          Dolar Tarjeta
+      <div className=" p-2 md:min-w-[160px] w-full">
+        <div className="font-semibold text-center text-secondary-accent stat-title">
+          Dolar Qatar
         </div>
-        <div className="stat-value text-2xl md:text-4xl">$ {valorArs}</div>
+        <div className="text-2xl stat-value md:text-4xl">$ {valorArs}</div>
       </div>
     </div>
   );
