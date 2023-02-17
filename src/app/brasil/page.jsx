@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Calculadora from "../../assets/calculator.png";
-import Brasil from "../../assets/brasil.svg";
+import BrasilImg from "../../assets/brasil.svg";
 import Arg from "../../assets/argentina.png";
 import Flecha from "../../assets/down-arrow.png";
 import { useState, useEffect } from "react";
@@ -10,7 +10,7 @@ import Link from "next/link";
 import back from "../../assets/back.svg";
 import { useAppContext } from "@/context/Context";
 
-const brasil = () => {
+const Brasil = () => {
   const {
     precio,
     resultado,
@@ -46,7 +46,7 @@ const brasil = () => {
                       <Image
                         className="w-10 ml-2"
                         alt="chile"
-                        src={Brasil}
+                        src={BrasilImg}
                       ></Image>
                     </div>
                   </label>
@@ -95,4 +95,4 @@ const brasil = () => {
   );
 };
 
-export default brasil;
+export default Brasil;

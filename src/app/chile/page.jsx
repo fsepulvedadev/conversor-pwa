@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Calculadora from "../../assets/calculator.png";
-import Chile from "../../assets/chile.svg";
+import ChileImg from "../../assets/chile.svg";
 
 import Arg from "../../assets/argentina.png";
 import Flecha from "../../assets/down-arrow.png";
@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 import Cotizaciones from "../../components/cotizaciones";
 import { useAppContext } from "@/context/Context";
 
-const chile = () => {
+const Chile = () => {
   const {
     precio,
     resultado,
@@ -47,7 +47,7 @@ const chile = () => {
                       <Image
                         className="w-10 ml-2"
                         alt="chile"
-                        src={Chile}
+                        src={ChileImg}
                       ></Image>
                     </div>
                   </label>
@@ -96,4 +96,4 @@ const chile = () => {
   );
 };
 
-export default chile;
+export default Chile;

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Chile from "../assets/chile.svg";
-import Brasil from "../assets/brasil.svg";
+import BrasilImg from "../assets/brasil.svg";
 import Peru from "../assets/peru.svg";
 import Tarjetas from "../assets/tarjetas.png";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function Home() {
                 <Link href={"/brasil"}>
                   <Image
                     className="w-20 mt-2 rounded md:mt-0"
-                    src={Brasil}
+                    src={BrasilImg}
                   ></Image>
                 </Link>
                 <Link href={"/peru"}>

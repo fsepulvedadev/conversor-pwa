@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Calculadora from "../../assets/calculator.png";
-import Peru from "../../assets/peru.svg";
+import PeruImg from "../../assets/peru.svg";
 
 import Arg from "../../assets/argentina.png";
 import Flecha from "../../assets/down-arrow.png";
@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 import Cotizaciones from "../../components/cotizaciones";
 import { useAppContext } from "@/context/Context";
 
-const peru = () => {
+const Peru = () => {
   const {
     precio,
     resultado,
@@ -48,7 +48,7 @@ const peru = () => {
                       <Image
                         className="w-10 ml-2"
                         alt="chile"
-                        src={Peru}
+                        src={PeruImg}
                       ></Image>
                     </div>
                   </label>
@@ -97,4 +97,4 @@ const peru = () => {
   );
 };
 
-export default peru;
+export default Peru;
