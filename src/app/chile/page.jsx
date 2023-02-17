@@ -33,7 +33,7 @@ const Chile = () => {
           <Image className="w-6" src={back} />
         </button>
       </Link>
-      <main className="w-10/12 mx-auto mb-10">
+      <main className="w-10/12 min-h-screen mx-auto mb-10">
         <div className="flex flex-col items-center justify-center py-4 mt-5 bg-base-200 rounded-box">
           <div className="w-11/12 card md:w-96 glass">
             <div className="card-body">
