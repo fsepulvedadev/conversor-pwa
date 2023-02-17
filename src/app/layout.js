@@ -33,7 +33,14 @@ export default function RootLayout({ children }) {
 
               <h1 className="w-full text-center text-white ">
                 Desarrollado por <br />
-                <a className="font-bold " href="https://fsepulveda.vercel.app/">
+                <a
+                  className="font-bold "
+                  href="https://fsepulveda.vercel.app/ 
+                
+                "
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Francisco Sepulveda
                 </a>
               </h1>
@@ -42,7 +49,7 @@ export default function RootLayout({ children }) {
                 <a
                   className=""
                   href="https://cafecito.app/fsepulveda"
-                  rel="noopener"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <img
@@ -57,7 +64,7 @@ export default function RootLayout({ children }) {
                 <a
                   className="cursor-pointer"
                   href="https://cafecito.app/fsepulveda"
-                  rel="noopener"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <Image className="w-10 rounded-2xl" src={cafecito}></Image>
